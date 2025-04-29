@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StickyNotesMetaSSAColocation.unity
-    guid: e2857486134c1f24eaf06cdef0cb0d9f
+    path: Assets/Scenes/ssa_mrcoco2.unity
+    guid: 6ed8b0158f4bf9549ba66735b84bf774
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4ebff249c28f61844a87606b7fc34b9e,
       type: 2}
