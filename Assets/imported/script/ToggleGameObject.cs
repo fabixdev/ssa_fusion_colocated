@@ -1,11 +1,11 @@
-using Fusion;
+﻿using Fusion;
 using System.Diagnostics;
 using UnityEngine;
 
 public class ToggleGameObject : NetworkBehaviour
 {
     [Networked]
-    private bool IsActive { get; set; }
+    public bool IsActive { get; set; }
 
     private void Start()
     {
@@ -18,20 +18,11 @@ public class ToggleGameObject : NetworkBehaviour
         UpdateGameObjectState();
     }
 
-    private void Update()
-    {
-        if (HasStateAuthority && Input.GetKeyDown(KeyCode.T))
-        {
-            UnityEngine.Debug.Log($"{gameObject.name}: 'T' key pressed, toggling");
-            Toggle();
-        }
-    }
-
     public void Toggle()
     {
         UnityEngine.Debug.Log($"{gameObject.name}: Toggle called");
 
-        // Solo il client con authority pu� modificare lo stato
+        // Solo il client con authority puň modificare lo stato
         if (HasStateAuthority)
         {
             IsActive = !IsActive;

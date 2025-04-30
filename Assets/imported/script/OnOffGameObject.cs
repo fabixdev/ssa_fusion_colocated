@@ -1,39 +1,73 @@
 using Fusion;
+using System;
 using UnityEngine;
 
 public class OnOffGameObject : NetworkBehaviour
 {
-    // Metodo RPC per accendere il GameObject
-    [Rpc(RpcSources.InputAuthority, RpcTargets.All)]
-    public void RpcTurnOn()
+    // Networked property to track the active state
+    [Networked]
+    public NetworkBool IsActive { get; set; }
+
+    // Method to manually check if the state has changed
+    public void UpdateState()
     {
-        UnityEngine.Debug.Log($"{gameObject.name}: RpcTurnOn called");
-        gameObject.SetActive(true);
+        // Only update if the object has been spawned and has authority
+        if (Object.HasStateAuthority)
+        {
+            gameObject.SetActive(IsActive);
+        }
     }
 
-    // Metodo RPC per spegnere il GameObject
-    [Rpc(RpcSources.InputAuthority, RpcTargets.All)]
-    public void RpcTurnOff()
+    // Method to turn on the GameObject
+    public void TurnOn()
     {
-        UnityEngine.Debug.Log($"{gameObject.name}: RpcTurnOff called");
-        gameObject.SetActive(false);
+        UnityEngine.Debug.Log($"{gameObject.name}: TurnOn called");
+        IsActive = true;
     }
 
-    // Chiamate locali per attivare/disattivare tramite input
+    // Method to turn off the GameObject
+    public void TurnOff()
+    {
+        UnityEngine.Debug.Log($"{gameObject.name}: TurnOff called");
+        IsActive = false;
+    }
+
+    // Public methods to control the GameObject
+    public void ActivateGameObject()
+    {
+        UnityEngine.Debug.Log($"{gameObject.name}: ActivateGameObject called");
+        if (Object.HasStateAuthority)
+        {
+            TurnOn();
+        }
+    }
+
+    public void DeactivateGameObject()
+    {
+        UnityEngine.Debug.Log($"{gameObject.name}: DeactivateGameObject called");
+        if (Object.HasStateAuthority)
+        {
+            TurnOff();
+        }
+    }
+
+    // Initialize the state when spawned
+    public override void Spawned()
+    {
+        base.Spawned();
+        UpdateState();  // Ensure the correct initial state when spawned
+    }
+
+    // Method to update the state each frame (if needed)
     private void Update()
     {
-        if (!HasInputAuthority) return; // Solo il client con autorità può invocare gli input
-
-        if (Input.GetKeyDown(KeyCode.Y)) // Premi 'Y' per attivare
+        // Only update the state if the object has authority
+        if (Object.HasStateAuthority)
         {
-            UnityEngine.Debug.Log($"{gameObject.name}: 'Y' key pressed, calling RpcTurnOn");
-            RpcTurnOn();
-        }
-
-        if (Input.GetKeyDown(KeyCode.U)) // Premi 'U' per disattivare
-        {
-            UnityEngine.Debug.Log($"{gameObject.name}: 'U' key pressed, calling RpcTurnOff");
-            RpcTurnOff();
+            if (IsActive != gameObject.activeSelf)
+            {
+                UpdateState();  // Update GameObject state manually
+            }
         }
     }
 }

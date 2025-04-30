@@ -8,7 +8,7 @@ public class DraggableSphere : NetworkBehaviour
 {
     public GameObject OriginalColoreSphere;
     public string tagName = "";
-    public string excludedTag = "";
+    public string excludedTag = "sphereremoved";
     public AudioSource audioSource;
 
     private void Start()
@@ -22,7 +22,7 @@ public class DraggableSphere : NetworkBehaviour
             }
             else
             {
-                UnityEngine.Debug.Log("OriginalColoreSphere has the excluded tag and its tag was not changed.");
+                //UnityEngine.Debug.Log("OriginalColoreSphere has the excluded tag and its tag was not changed.");
             }
         }
         else
@@ -72,7 +72,7 @@ public class DraggableSphere : NetworkBehaviour
         }
         else
         {
-            UnityEngine.Debug.Log("Collided object does not have the specified tag or is excluded: " + other.gameObject.tag);
+            //UnityEngine.Debug.Log("Collided object does not have the specified tag or is excluded: " + other.gameObject.tag);
         }
     }
 

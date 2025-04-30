@@ -25,8 +25,8 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Angle: 60.5
+    - _Angle: 0
     - _SceneMeshZWrite: 0
     m_Colors:
-    - _Color: {r: 0, g: 0.45283014, b: 0.45283014, a: 0.5529412}
+    - _Color: {r: 0, g: 0.45283008, b: 0.45283008, a: 0.105882354}
   m_BuildTextureStacks: []

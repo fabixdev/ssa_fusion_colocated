@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class DisableAtStart : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        // Disable this GameObject
+        // Disattiva l'oggetto ogni volta che viene abilitato
         gameObject.SetActive(false);
     }
 }

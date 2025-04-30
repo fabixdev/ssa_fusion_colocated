@@ -548,6 +548,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: 0.02}
   ignoreOffsetSign: 1
   magnetLayer: PostItStickingSurface
+  applyLayerToChildren: 1
 --- !u!114 &8587891909870094713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,13 +562,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectionButton: {fileID: 0}
-  hideButtonAfterMainWallSelection: 1
+  hideButtonAfterMainWallSelection: 0
   spaceLocalizationHandler: {fileID: 0}
   initialColor: {r: 0, g: 0, b: 0, a: 0}
-  visibilityLevel: 1
-  maxMeshOpacity: 0.6
+  effectKind: 1
+  maxEffectValue: -0.07
+  minVisibilityLevelDuringProximity: 0.1
+  useBaseEffectDuringPendingSelection: 1
+  useBaseEffectDuringMainWall: 0
+  useBaseEffectDuringBaseWall: 0
   status: 0
-  isVisionOSPrefab: 0
 --- !u!114 &7125820186682226080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,7 +630,6 @@ GameObject:
   - component: {fileID: 8741809372949240261}
   - component: {fileID: 6824591737500019983}
   - component: {fileID: 5966097089338763835}
-  - component: {fileID: 3470017984807404450}
   - component: {fileID: 5327232913303635526}
   m_Layer: 0
   m_Name: button - large
@@ -753,18 +756,6 @@ MonoBehaviour:
   doNotallowTouchIfSiblingWasRecentlyTouched: 1
   automaticallyDetectSiblings: 1
   siblingButtons: []
---- !u!114 &3470017984807404450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5022972047440907482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bec180ed0ef74440b93237e826654f13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5327232913303635526
 MonoBehaviour:
   m_ObjectHideFlags: 0
