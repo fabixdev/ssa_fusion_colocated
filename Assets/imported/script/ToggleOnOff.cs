@@ -1,4 +1,5 @@
 ﻿using Fusion;
+using System;
 using System.Diagnostics;
 using UnityEngine;
 
@@ -23,12 +24,17 @@ public class ToggleOnOff : NetworkBehaviour
         UnityEngine.Debug.Log($"{gameObject.name}: Toggle called");
 
         // Solo il client con authority può modificare lo stato
-        if (HasStateAuthority)
+        if (Object.HasStateAuthority)
         {
             IsActive = !IsActive; // Alterna lo stato
             UnityEngine.Debug.Log($"{gameObject.name}: IsActive set to {IsActive}");
             UpdateGameObjectState();
             RPC_UpdateState(IsActive); // Sincronizza con gli altri client
+        }
+        else
+        {
+            // Se non siamo lo State Authority, inviamo una richiesta per cambiare lo stato
+            RPC_RequestToggle();
         }
     }
 
@@ -37,7 +43,7 @@ public class ToggleOnOff : NetworkBehaviour
         UnityEngine.Debug.Log($"{gameObject.name}: TurnOn called");
 
         // Solo il client con authority può modificare lo stato
-        if (HasStateAuthority)
+        if (Object.HasStateAuthority)
         {
             if (!IsActive)  // Accende solo se non è già acceso
             {
@@ -47,6 +53,11 @@ public class ToggleOnOff : NetworkBehaviour
                 RPC_UpdateState(true); // Sincronizza con gli altri client
             }
         }
+        else
+        {
+            // Se non siamo lo State Authority, inviamo una richiesta per accendere l'oggetto
+            RPC_RequestTurnOn();
+        }
     }
 
     public void TurnOff()
@@ -54,7 +65,7 @@ public class ToggleOnOff : NetworkBehaviour
         UnityEngine.Debug.Log($"{gameObject.name}: TurnOff called");
 
         // Solo il client con authority può modificare lo stato
-        if (HasStateAuthority)
+        if (Object.HasStateAuthority)
         {
             if (IsActive)  // Spegne solo se è acceso
             {
@@ -64,6 +75,11 @@ public class ToggleOnOff : NetworkBehaviour
                 RPC_UpdateState(false); // Sincronizza con gli altri client
             }
         }
+        else
+        {
+            // Se non siamo lo State Authority, inviamo una richiesta per spegnere l'oggetto
+            RPC_RequestTurnOff();
+        }
     }
 
     private void UpdateGameObjectState()
@@ -72,11 +88,51 @@ public class ToggleOnOff : NetworkBehaviour
         UnityEngine.Debug.Log($"{gameObject.name}: GameObject SetActive({IsActive})");
     }
 
-    [Rpc(RpcSources.StateAuthority, RpcTargets.All)]
+    [Rpc(RpcSources.All, RpcTargets.All)]
     private void RPC_UpdateState(bool active)
     {
+        // Sincronizza lo stato su tutti i client
         IsActive = active;
         UpdateGameObjectState();
         UnityEngine.Debug.Log($"{gameObject.name}: RPC_UpdateState received, active = {active}");
+    }
+
+    // RPC per richiedere al client con authority di eseguire il toggle
+    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    private void RPC_RequestToggle(RpcInfo info = default)
+    {
+        if (Object.HasStateAuthority)
+        {
+            IsActive = !IsActive; // Alterna lo stato
+            RPC_UpdateState(IsActive); // Sincronizza con gli altri client
+        }
+    }
+
+    // RPC per richiedere al client con authority di accendere il GameObject
+    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    private void RPC_RequestTurnOn(RpcInfo info = default)
+    {
+        if (Object.HasStateAuthority)
+        {
+            if (!IsActive)
+            {
+                IsActive = true;
+                RPC_UpdateState(true); // Sincronizza con gli altri client
+            }
+        }
+    }
+
+    // RPC per richiedere al client con authority di spegnere il GameObject
+    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    private void RPC_RequestTurnOff(RpcInfo info = default)
+    {
+        if (Object.HasStateAuthority)
+        {
+            if (IsActive)
+            {
+                IsActive = false;
+                RPC_UpdateState(false); // Sincronizza con gli altri client
+            }
+        }
     }
 }

@@ -15176,6 +15176,7 @@ GameObject:
   - component: {fileID: 726875375}
   - component: {fileID: 726875378}
   - component: {fileID: 726875379}
+  - component: {fileID: 726875380}
   m_Layer: 0
   m_Name: external
   m_TagString: Untagged
@@ -15223,6 +15224,7 @@ MonoBehaviour:
   - {fileID: 1093975514}
   NetworkedBehaviours:
   - {fileID: 726875379}
+  - {fileID: 726875380}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &726875379
 MonoBehaviour:
@@ -15231,12 +15233,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726875374}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4d7401f49faf064ea1bedcb94a0d6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _IsActive: 1
+--- !u!114 &726875380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726875374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089609072d6219e479bc14965e8df881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &727220521
 GameObject:
   m_ObjectHideFlags: 0
@@ -23442,7 +23456,7 @@ GameObject:
   - component: {fileID: 1052690196}
   - component: {fileID: 1052690197}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23631,9 +23645,9 @@ MonoBehaviour:
   keypressCustomEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 726875379}
-        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
-        m_MethodName: Toggle
+      - m_Target: {fileID: 726875380}
+        m_TargetAssemblyTypeName: SharedActivator, Assembly-CSharp
+        m_MethodName: ActivateGameObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
