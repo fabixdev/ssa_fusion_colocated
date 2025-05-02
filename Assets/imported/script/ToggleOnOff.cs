@@ -30,11 +30,13 @@ public class ToggleOnOff : NetworkBehaviour
             UnityEngine.Debug.Log($"{gameObject.name}: IsActive set to {IsActive}");
             UpdateGameObjectState();
             RPC_UpdateState(IsActive); // Sincronizza con gli altri client
+            GameObject.Find("turntoggles").GetComponent<AudioSource>().Play();
         }
         else
         {
             // Se non siamo lo State Authority, inviamo una richiesta per cambiare lo stato
             RPC_RequestToggle();
+            GameObject.Find("turntoggles").GetComponent<AudioSource>().Play();
         }
     }
 
@@ -51,12 +53,14 @@ public class ToggleOnOff : NetworkBehaviour
                 UnityEngine.Debug.Log($"{gameObject.name}: IsActive set to true");
                 UpdateGameObjectState();
                 RPC_UpdateState(true); // Sincronizza con gli altri client
+                GameObject.Find("turnons").GetComponent<AudioSource>().Play();
             }
         }
         else
         {
             // Se non siamo lo State Authority, inviamo una richiesta per accendere l'oggetto
             RPC_RequestTurnOn();
+            GameObject.Find("turnons").GetComponent<AudioSource>().Play();
         }
     }
 
@@ -73,12 +77,14 @@ public class ToggleOnOff : NetworkBehaviour
                 UnityEngine.Debug.Log($"{gameObject.name}: IsActive set to false");
                 UpdateGameObjectState();
                 RPC_UpdateState(false); // Sincronizza con gli altri client
+                GameObject.Find("turnoffs").GetComponent<AudioSource>().Play();
             }
         }
         else
         {
             // Se non siamo lo State Authority, inviamo una richiesta per spegnere l'oggetto
             RPC_RequestTurnOff();
+            GameObject.Find("turnoffs").GetComponent<AudioSource>().Play();
         }
     }
 

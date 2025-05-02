@@ -6,6 +6,7 @@ public class SharedActivator : NetworkBehaviour
 {
     [Networked] private bool isActive { get; set; }  // Stato attivo/inattivo replicato in rete
 
+
     public override void Spawned()
     {
         // Imposta lo stato iniziale del GameObject appena l'oggetto di rete è stato spawnato
@@ -30,11 +31,13 @@ public class SharedActivator : NetworkBehaviour
             isActive = true;
             // Notifica agli altri client che lo stato è cambiato
             RPC_ToggleActive(true);
+            GameObject.Find("turnons").GetComponent<AudioSource>().Play();
         }
         else
         {
             // Se non siamo lo State Authority, invochiamo l'RPC per chiedere di attivare l'oggetto
             RPC_RequestActivate();
+            GameObject.Find("turnons").GetComponent<AudioSource>().Play();
         }
     }
 
@@ -45,11 +48,13 @@ public class SharedActivator : NetworkBehaviour
             isActive = false;
             // Notifica agli altri client che lo stato è cambiato
             RPC_ToggleActive(false);
+            GameObject.Find("turnoffs").GetComponent<AudioSource>().Play();
         }
         else
         {
             // Se non siamo lo State Authority, invochiamo l'RPC per chiedere di disattivare l'oggetto
             RPC_RequestDeactivate();
+            GameObject.Find("turnoffs").GetComponent<AudioSource>().Play();
         }
     }
 

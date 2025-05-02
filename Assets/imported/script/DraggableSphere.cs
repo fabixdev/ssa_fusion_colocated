@@ -8,8 +8,7 @@ public class DraggableSphere : NetworkBehaviour
 {
     public GameObject OriginalColoreSphere;
     public string tagName = "";
-    public string excludedTag = "sphereremoved";
-    public AudioSource audioSource;
+    private string excludedTag = "sphereremoved";
 
     private void Start()
     {
@@ -47,7 +46,7 @@ public class DraggableSphere : NetworkBehaviour
         {
             UnityEngine.Debug.Log("Collided with object having tag: " + tagName);
 
-            if (audioSource != null) audioSource.Play();
+            GameObject.Find("soundconfirm").GetComponent<AudioSource>().Play();
 
             MeshRenderer targetMeshRenderer = other.gameObject.GetComponent<MeshRenderer>();
             NetworkObject netObj = other.gameObject.GetComponent<NetworkObject>();
