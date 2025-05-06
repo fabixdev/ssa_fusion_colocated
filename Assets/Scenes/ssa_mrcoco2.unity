@@ -1580,7 +1580,11 @@ MonoBehaviour:
   - {fileID: 1471147583}
   - {fileID: 1093975514}
   - {fileID: 1639272967}
+  - {fileID: 1561447965}
+  - {fileID: 984373622}
   - {fileID: 395965260}
+  - {fileID: 1642716217}
+  - {fileID: 1692901453}
   - {fileID: 421500477}
   - {fileID: 256687365}
   - {fileID: 1923821599}
@@ -1592,6 +1596,7 @@ MonoBehaviour:
   - {fileID: 1326097055}
   - {fileID: 483617167}
   - {fileID: 768383201}
+  - {fileID: 429689586}
   NetworkedBehaviours:
   - {fileID: 93375068}
   ForceRemoteRenderTimeframe: 0
@@ -4678,11 +4683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 256687364}
-  - component: {fileID: 256687360}
-  - component: {fileID: 256687361}
   - component: {fileID: 256687365}
-  - component: {fileID: 256687366}
-  - component: {fileID: 256687367}
   m_Layer: 0
   m_Name: cube sx
   m_TagString: Untagged
@@ -4690,32 +4691,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &256687360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256687359}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d08d9672f74c77442a665601e62b3817, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _IsActive:
-    _value: 1
---- !u!114 &256687361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256687359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6f44ea859cebb443a3d46d544589095, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &256687364
 Transform:
   m_ObjectHideFlags: 0
@@ -4754,36 +4729,8 @@ MonoBehaviour:
   - {fileID: 1239696932}
   - {fileID: 1362030964}
   - {fileID: 1045148539}
-  NetworkedBehaviours:
-  - {fileID: 256687360}
-  - {fileID: 256687366}
-  - {fileID: 256687367}
+  NetworkedBehaviours: []
   ForceRemoteRenderTimeframe: 0
---- !u!114 &256687366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256687359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4d7401f49faf064ea1bedcb94a0d6f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _IsActive: 1
---- !u!114 &256687367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256687359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 089609072d6219e479bc14965e8df881, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &258201251
 GameObject:
   m_ObjectHideFlags: 0
@@ -4920,7 +4867,7 @@ GameObject:
   m_Component:
   - component: {fileID: 268131299}
   m_Layer: 0
-  m_Name: ROW1
+  m_Name: o_ROW1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5051,7 +4998,7 @@ Transform:
   m_GameObject: {fileID: 271848960}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.90599996, y: -0.14300005, z: -0.002000004}
+  m_LocalPosition: {x: 0.90599996, y: -0.073, z: -0.002000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5072,9 +5019,8 @@ GameObject:
   - component: {fileID: 274775625}
   - component: {fileID: 274775627}
   - component: {fileID: 274775626}
-  - component: {fileID: 274775628}
   m_Layer: 0
-  m_Name: ROW2
+  m_Name: o_ROW2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5115,7 +5061,6 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 274775627}
-  - {fileID: 274775628}
   - {fileID: 370956917}
   - {fileID: 1797275227}
   ForceRemoteRenderTimeframe: 0
@@ -5131,19 +5076,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6927dc75808a434cad0e077cd9ccb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &274775628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274775624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4d7401f49faf064ea1bedcb94a0d6f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _IsActive: 1
 --- !u!1 &279748144
 GameObject:
   m_ObjectHideFlags: 0
@@ -6299,7 +6231,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330907124}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6f44ea859cebb443a3d46d544589095, type: 3}
   m_Name: 
@@ -7160,7 +7092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &354773869
 Transform:
   m_ObjectHideFlags: 0
@@ -7376,7 +7308,6 @@ GameObject:
   - component: {fileID: 370956914}
   - component: {fileID: 370956915}
   - component: {fileID: 370956917}
-  - component: {fileID: 370956918}
   m_Layer: 0
   m_Name: button
   m_TagString: Untagged
@@ -7569,9 +7500,9 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 726875380}
-        m_TargetAssemblyTypeName: SharedActivator, Assembly-CSharp
-        m_MethodName: ActivateGameObject
+      - m_Target: {fileID: 726875379}
+        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
+        m_MethodName: TurnOn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7627,18 +7558,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _IsActive: 1
---- !u!114 &370956918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 370956912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6f44ea859cebb443a3d46d544589095, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &377129140
 GameObject:
   m_ObjectHideFlags: 0
@@ -7847,7 +7766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 61468139}
   targetObject: {fileID: 330907124}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 0.075, z: 0}
 --- !u!1 &390239694
 GameObject:
   m_ObjectHideFlags: 0
@@ -7920,11 +7839,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 395965258}
-  - component: {fileID: 395965261}
   - component: {fileID: 395965260}
-  - component: {fileID: 395965259}
   m_Layer: 0
-  m_Name: ROW2
+  m_Name: i_ROW2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7947,19 +7864,6 @@ Transform:
   - {fileID: 1692901448}
   m_Father: {fileID: 1639272965}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &395965259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395965257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4d7401f49faf064ea1bedcb94a0d6f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _IsActive: 1
 --- !u!114 &395965260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7975,25 +7879,11 @@ MonoBehaviour:
   SortKey: 523443057
   ObjectInterest: 1
   Flags: 524289
-  NestedObjects: []
-  NetworkedBehaviours:
-  - {fileID: 395965261}
-  - {fileID: 395965259}
+  NestedObjects:
   - {fileID: 1642716217}
-  - {fileID: 1692901452}
+  - {fileID: 1692901453}
+  NetworkedBehaviours: []
   ForceRemoteRenderTimeframe: 0
---- !u!114 &395965261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395965257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6927dc75808a434cad0e077cd9ccb74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &400419496
 GameObject:
   m_ObjectHideFlags: 0
@@ -8609,10 +8499,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 421500476}
-  - component: {fileID: 421500478}
   - component: {fileID: 421500477}
   m_Layer: 0
-  m_Name: ROW3
+  m_Name: i_ROW3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8661,21 +8550,8 @@ MonoBehaviour:
   - {fileID: 1326097055}
   - {fileID: 483617167}
   - {fileID: 768383201}
-  NetworkedBehaviours:
-  - {fileID: 421500478}
+  NetworkedBehaviours: []
   ForceRemoteRenderTimeframe: 0
---- !u!114 &421500478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 421500475}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6927dc75808a434cad0e077cd9ccb74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &421965140
 GameObject:
   m_ObjectHideFlags: 0
@@ -8902,6 +8778,76 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429149432}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &429689584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 429689587}
+  - component: {fileID: 429689586}
+  - component: {fileID: 429689589}
+  m_Layer: 0
+  m_Name: 'inside '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &429689586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429689584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SortKey: 191483713
+  ObjectInterest: 1
+  Flags: 524289
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 429689589}
+  ForceRemoteRenderTimeframe: 0
+--- !u!4 &429689587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429689584}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.07541859, y: -0.07780488, z: -0.18335986}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1897970884}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &429689589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429689584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0987d725124ccc42a106c8374e6523e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  row2Groups:
+  - {fileID: 1642716211}
+  - {fileID: 1692901447}
+  row3Groups:
+  - {fileID: 256687359}
+  - {fileID: 543795015}
 --- !u!1 &430109954
 GameObject:
   m_ObjectHideFlags: 0
@@ -10265,18 +10211,6 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 274775628}
-        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
-        m_MethodName: TurnOn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 370956917}
         m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
         m_MethodName: TurnOn
@@ -10566,6 +10500,7 @@ GameObject:
   - component: {fileID: 483617166}
   - component: {fileID: 483617165}
   - component: {fileID: 483617164}
+  - component: {fileID: 483617170}
   m_Layer: 0
   m_Name: '[BuildingBlock] Cube (3)'
   m_TagString: Untagged
@@ -10765,6 +10700,23 @@ MonoBehaviour:
       _value: '{}'
     - _memberName: installMatchmaking
       _value: '{"value__":0}'
+--- !u!114 &483617170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483617159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d878f3cefe73de843887845295dafb78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  rb: {fileID: 0}
+  delay: 5
+  minVelocity: 0.01
 --- !u!1 &484780117
 GameObject:
   m_ObjectHideFlags: 0
@@ -11952,10 +11904,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543795016}
-  - component: {fileID: 543795018}
-  - component: {fileID: 543795017}
   - component: {fileID: 543795019}
-  - component: {fileID: 543795020}
   m_Layer: 0
   m_Name: cube dx
   m_TagString: Untagged
@@ -11981,32 +11930,6 @@ Transform:
   - {fileID: 144988356}
   m_Father: {fileID: 421500476}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &543795017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543795015}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d08d9672f74c77442a665601e62b3817, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _IsActive:
-    _value: 0
---- !u!114 &543795018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543795015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6f44ea859cebb443a3d46d544589095, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &543795019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12027,22 +11950,8 @@ MonoBehaviour:
   - {fileID: 1326097055}
   - {fileID: 483617167}
   - {fileID: 768383201}
-  NetworkedBehaviours:
-  - {fileID: 543795017}
-  - {fileID: 543795020}
+  NetworkedBehaviours: []
   ForceRemoteRenderTimeframe: 0
---- !u!114 &543795020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543795015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 089609072d6219e479bc14965e8df881, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &544513599
 GameObject:
   m_ObjectHideFlags: 0
@@ -15558,8 +15467,6 @@ GameObject:
   - component: {fileID: 726875375}
   - component: {fileID: 726875378}
   - component: {fileID: 726875379}
-  - component: {fileID: 726875380}
-  - component: {fileID: 726875381}
   m_Layer: 0
   m_Name: external
   m_TagString: Untagged
@@ -15607,7 +15514,6 @@ MonoBehaviour:
   - {fileID: 1093975514}
   NetworkedBehaviours:
   - {fileID: 726875379}
-  - {fileID: 726875380}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &726875379
 MonoBehaviour:
@@ -15622,30 +15528,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _IsActive: 1
---- !u!114 &726875380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726875374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 089609072d6219e479bc14965e8df881, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &726875381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726875374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6f44ea859cebb443a3d46d544589095, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &727220521
 GameObject:
   m_ObjectHideFlags: 0
@@ -16006,78 +15888,6 @@ MonoBehaviour:
       - m_Target: {fileID: 83225615}
         m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
         m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 354773872}
-        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1639272969}
-        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 274775628}
-        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
-        m_MethodName: TurnOff
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 395965259}
-        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
-        m_MethodName: TurnOff
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1242500002}
-        m_TargetAssemblyTypeName: DisableChildren, Assembly-CSharp
-        m_MethodName: DisableAllChildren
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 421500478}
-        m_TargetAssemblyTypeName: DisableChildren, Assembly-CSharp
-        m_MethodName: DisableAllChildren
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16519,6 +16329,7 @@ GameObject:
   - component: {fileID: 768383200}
   - component: {fileID: 768383199}
   - component: {fileID: 768383198}
+  - component: {fileID: 768383204}
   m_Layer: 0
   m_Name: '[BuildingBlock] Cube (4)'
   m_TagString: Untagged
@@ -16718,6 +16529,23 @@ MonoBehaviour:
       _value: '{}'
     - _memberName: installMatchmaking
       _value: '{"value__":0}'
+--- !u!114 &768383204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768383193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d878f3cefe73de843887845295dafb78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  rb: {fileID: 0}
+  delay: 5
+  minVelocity: 0.01
 --- !u!1 &769715208
 GameObject:
   m_ObjectHideFlags: 0
@@ -21323,6 +21151,8 @@ GameObject:
   - component: {fileID: 984373620}
   - component: {fileID: 984373618}
   - component: {fileID: 984373619}
+  - component: {fileID: 984373621}
+  - component: {fileID: 984373622}
   m_Layer: 0
   m_Name: button (1)
   m_TagString: Untagged
@@ -21515,7 +21345,7 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 421500478}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DisableChildren, Assembly-CSharp
         m_MethodName: DisableAllChildren
         m_Mode: 1
@@ -21527,7 +21357,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1642716217}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
         m_MethodName: TurnOff
         m_Mode: 1
@@ -21539,7 +21369,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1692901452}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
         m_MethodName: TurnOn
         m_Mode: 1
@@ -21584,6 +21414,39 @@ MonoBehaviour:
   installationRoutineCheckpoint:
     _installationRoutineId: 
     _installationVariants: []
+--- !u!114 &984373621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984373616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dc9e191df0c25745980c5e11e5fde65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  indexInLevel: 1
+  manager: {fileID: 429689589}
+--- !u!114 &984373622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984373616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SortKey: 1921216861
+  ObjectInterest: 1
+  Flags: 524289
+  NestedObjects: []
+  NetworkedBehaviours: []
+  ForceRemoteRenderTimeframe: 0
 --- !u!1 &984714561
 GameObject:
   m_ObjectHideFlags: 0
@@ -21938,7 +21801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1007081036}
   m_Layer: 0
-  m_Name: ROW1
+  m_Name: i_ROW1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22333,6 +22196,7 @@ GameObject:
   - component: {fileID: 1045148538}
   - component: {fileID: 1045148537}
   - component: {fileID: 1045148536}
+  - component: {fileID: 1045148542}
   m_Layer: 0
   m_Name: '[BuildingBlock] Cube'
   m_TagString: Untagged
@@ -22532,6 +22396,23 @@ MonoBehaviour:
       _value: '{}'
     - _memberName: installMatchmaking
       _value: '{"value__":0}'
+--- !u!114 &1045148542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045148531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d878f3cefe73de843887845295dafb78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  rb: {fileID: 0}
+  delay: 5
+  minVelocity: 0.01
 --- !u!1 &1048888903
 GameObject:
   m_ObjectHideFlags: 0
@@ -22582,6 +22463,7 @@ GameObject:
   - component: {fileID: 1051523565}
   - component: {fileID: 1051523564}
   - component: {fileID: 1051523563}
+  - component: {fileID: 1051523569}
   m_Layer: 0
   m_Name: '[BuildingBlock] Cube (1)'
   m_TagString: Untagged
@@ -22781,237 +22663,23 @@ MonoBehaviour:
       _value: '{}'
     - _memberName: installMatchmaking
       _value: '{"value__":0}'
---- !u!1 &1052690193
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1052690195}
-  - component: {fileID: 1052690194}
-  - component: {fileID: 1052690197}
-  - component: {fileID: 1052690198}
-  - component: {fileID: 1052690196}
-  m_Layer: 0
-  m_Name: debugger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1052690194
+--- !u!114 &1051523569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052690193}
+  m_GameObject: {fileID: 1051523558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d00b93049221f1419a0352406cc31b3, type: 3}
+  m_Script: {fileID: 11500000, guid: d878f3cefe73de843887845295dafb78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyname: a
-  keypressCustomEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 83225615}
-        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 354773872}
-        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1639272969}
-        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1242500002}
-        m_TargetAssemblyTypeName: DisableChildren, Assembly-CSharp
-        m_MethodName: DisableAllChildren
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 274775628}
-        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
-        m_MethodName: TurnOff
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!4 &1052690195
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052690193}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11700004, y: -0.14300002, z: 0.008999974}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1052690196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052690193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d00b93049221f1419a0352406cc31b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyname: b
-  keypressCustomEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
-        m_MethodName: TurnOn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1797275227}
-        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
-        m_MethodName: TurnOn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 274775628}
-        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
-        m_MethodName: TurnOn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1052690197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052690193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d00b93049221f1419a0352406cc31b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyname: c
-  keypressCustomEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 726875380}
-        m_TargetAssemblyTypeName: SharedActivator, Assembly-CSharp
-        m_MethodName: ActivateGameObject
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1052690198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052690193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d00b93049221f1419a0352406cc31b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyname: d
-  keypressCustomEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1242500002}
-        m_TargetAssemblyTypeName: DisableChildren, Assembly-CSharp
-        m_MethodName: DisableAllChildren
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 274775628}
-        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
-        m_MethodName: TurnOff
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  rb: {fileID: 0}
+  delay: 5
+  minVelocity: 0.01
 --- !u!1 &1062619810
 GameObject:
   m_ObjectHideFlags: 0
@@ -26597,6 +26265,7 @@ GameObject:
   - component: {fileID: 1239696931}
   - component: {fileID: 1239696930}
   - component: {fileID: 1239696929}
+  - component: {fileID: 1239696935}
   m_Layer: 0
   m_Name: '[BuildingBlock] Cube (2)'
   m_TagString: Untagged
@@ -26796,6 +26465,23 @@ MonoBehaviour:
       _value: '{}'
     - _memberName: installMatchmaking
       _value: '{"value__":0}'
+--- !u!114 &1239696935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239696924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d878f3cefe73de843887845295dafb78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  rb: {fileID: 0}
+  delay: 5
+  minVelocity: 0.01
 --- !u!1 &1242499999
 GameObject:
   m_ObjectHideFlags: 0
@@ -26808,7 +26494,7 @@ GameObject:
   - component: {fileID: 1242500002}
   - component: {fileID: 1242500001}
   m_Layer: 0
-  m_Name: ROW3
+  m_Name: o_ROW3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26861,7 +26547,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242499999}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6927dc75808a434cad0e077cd9ccb74, type: 3}
   m_Name: 
@@ -28980,6 +28666,7 @@ GameObject:
   - component: {fileID: 1326097054}
   - component: {fileID: 1326097053}
   - component: {fileID: 1326097052}
+  - component: {fileID: 1326097058}
   m_Layer: 0
   m_Name: '[BuildingBlock] Cube (2)'
   m_TagString: Untagged
@@ -29179,6 +28866,23 @@ MonoBehaviour:
       _value: '{}'
     - _memberName: installMatchmaking
       _value: '{"value__":0}'
+--- !u!114 &1326097058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326097047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d878f3cefe73de843887845295dafb78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  rb: {fileID: 0}
+  delay: 5
+  minVelocity: 0.01
 --- !u!1 &1326520834
 GameObject:
   m_ObjectHideFlags: 0
@@ -29442,7 +29146,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1639272969}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
         m_MethodName: TurnOff
         m_Mode: 1
@@ -29454,53 +29158,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 274775627}
-        m_TargetAssemblyTypeName: DisableChildren, Assembly-CSharp
-        m_MethodName: DisableAllChildren
-        m_Mode: 1
+      - m_Target: {fileID: 468729829}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 395965261}
-        m_TargetAssemblyTypeName: DisableChildren, Assembly-CSharp
-        m_MethodName: DisableAllChildren
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1242500002}
-        m_TargetAssemblyTypeName: DisableChildren, Assembly-CSharp
-        m_MethodName: DisableAllChildren
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 421500478}
-        m_TargetAssemblyTypeName: DisableChildren, Assembly-CSharp
-        m_MethodName: DisableAllChildren
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   _whenUnselect:
     m_PersistentCalls:
@@ -30020,6 +29688,7 @@ GameObject:
   - component: {fileID: 1362030963}
   - component: {fileID: 1362030962}
   - component: {fileID: 1362030961}
+  - component: {fileID: 1362030967}
   m_Layer: 0
   m_Name: '[BuildingBlock] Cube (3)'
   m_TagString: Untagged
@@ -30219,6 +29888,23 @@ MonoBehaviour:
       _value: '{}'
     - _memberName: installMatchmaking
       _value: '{"value__":0}'
+--- !u!114 &1362030967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362030956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d878f3cefe73de843887845295dafb78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  rb: {fileID: 0}
+  delay: 5
+  minVelocity: 0.01
 --- !u!1 &1365756157
 GameObject:
   m_ObjectHideFlags: 0
@@ -34675,6 +34361,8 @@ GameObject:
   - component: {fileID: 1561447963}
   - component: {fileID: 1561447961}
   - component: {fileID: 1561447962}
+  - component: {fileID: 1561447964}
+  - component: {fileID: 1561447965}
   m_Layer: 0
   m_Name: button
   m_TagString: Untagged
@@ -34867,7 +34555,7 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 421500478}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DisableChildren, Assembly-CSharp
         m_MethodName: DisableAllChildren
         m_Mode: 1
@@ -34879,7 +34567,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1642716217}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
         m_MethodName: TurnOn
         m_Mode: 1
@@ -34891,7 +34579,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1692901452}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
         m_MethodName: TurnOff
         m_Mode: 1
@@ -34936,6 +34624,39 @@ MonoBehaviour:
   installationRoutineCheckpoint:
     _installationRoutineId: 
     _installationVariants: []
+--- !u!114 &1561447964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561447959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dc9e191df0c25745980c5e11e5fde65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  indexInLevel: 0
+  manager: {fileID: 429689589}
+--- !u!114 &1561447965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561447959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SortKey: 4071993065
+  ObjectInterest: 1
+  Flags: 524289
+  NestedObjects: []
+  NetworkedBehaviours: []
+  ForceRemoteRenderTimeframe: 0
 --- !u!1 &1561625331
 GameObject:
   m_ObjectHideFlags: 0
@@ -36539,8 +36260,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1639272965}
   - component: {fileID: 1639272967}
-  - component: {fileID: 1639272969}
-  - component: {fileID: 1639272970}
   m_Layer: 0
   m_Name: INSIDE
   m_TagString: Untagged
@@ -36582,7 +36301,11 @@ MonoBehaviour:
   ObjectInterest: 1
   Flags: 524289
   NestedObjects:
+  - {fileID: 1561447965}
+  - {fileID: 984373622}
   - {fileID: 395965260}
+  - {fileID: 1642716217}
+  - {fileID: 1692901453}
   - {fileID: 421500477}
   - {fileID: 256687365}
   - {fileID: 1923821599}
@@ -36594,34 +36317,8 @@ MonoBehaviour:
   - {fileID: 1326097055}
   - {fileID: 483617167}
   - {fileID: 768383201}
-  NetworkedBehaviours:
-  - {fileID: 1639272969}
+  NetworkedBehaviours: []
   ForceRemoteRenderTimeframe: 0
---- !u!114 &1639272969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639272964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4d7401f49faf064ea1bedcb94a0d6f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _IsActive: 1
---- !u!114 &1639272970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639272964}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6f44ea859cebb443a3d46d544589095, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1641536979
 GameObject:
   m_ObjectHideFlags: 0
@@ -37031,9 +36728,9 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256687367}
-        m_TargetAssemblyTypeName: SharedActivator, Assembly-CSharp
-        m_MethodName: ActivateGameObject
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -37085,9 +36782,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1642716211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6f44ea859cebb443a3d46d544589095, type: 3}
+  m_Script: {fileID: 11500000, guid: 9dc9e191df0c25745980c5e11e5fde65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 2
+  indexInLevel: 0
+  manager: {fileID: 429689589}
 --- !u!114 &1642716217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37097,10 +36797,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1642716211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4d7401f49faf064ea1bedcb94a0d6f7, type: 3}
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _IsActive: 1
+  SortKey: 3587701511
+  ObjectInterest: 1
+  Flags: 524289
+  NestedObjects: []
+  NetworkedBehaviours: []
+  ForceRemoteRenderTimeframe: 0
 --- !u!1 &1645675659
 GameObject:
   m_ObjectHideFlags: 0
@@ -37935,8 +37640,8 @@ GameObject:
   - component: {fileID: 1692901451}
   - component: {fileID: 1692901449}
   - component: {fileID: 1692901450}
-  - component: {fileID: 1692901453}
   - component: {fileID: 1692901452}
+  - component: {fileID: 1692901453}
   m_Layer: 0
   m_Name: button dx
   m_TagString: Untagged
@@ -38129,9 +37834,9 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 543795020}
-        m_TargetAssemblyTypeName: SharedActivator, Assembly-CSharp
-        m_MethodName: ActivateGameObject
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ToggleOnOff, Assembly-CSharp
+        m_MethodName: TurnOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -38183,10 +37888,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1692901447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4d7401f49faf064ea1bedcb94a0d6f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9dc9e191df0c25745980c5e11e5fde65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _IsActive: 1
+  level: 2
+  indexInLevel: 1
+  manager: {fileID: 429689589}
 --- !u!114 &1692901453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38196,9 +37903,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1692901447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6f44ea859cebb443a3d46d544589095, type: 3}
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SortKey: 1839065468
+  ObjectInterest: 1
+  Flags: 524289
+  NestedObjects: []
+  NetworkedBehaviours: []
+  ForceRemoteRenderTimeframe: 0
 --- !u!1 &1694866608
 GameObject:
   m_ObjectHideFlags: 0
@@ -41886,6 +41599,7 @@ Transform:
   m_Children:
   - {fileID: 354773869}
   - {fileID: 1639272965}
+  - {fileID: 429689587}
   m_Father: {fileID: 93375067}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1899208004
@@ -42782,6 +42496,7 @@ GameObject:
   - component: {fileID: 1923821598}
   - component: {fileID: 1923821597}
   - component: {fileID: 1923821596}
+  - component: {fileID: 1923821602}
   m_Layer: 0
   m_Name: '[BuildingBlock] Cube (1)'
   m_TagString: Untagged
@@ -42981,6 +42696,23 @@ MonoBehaviour:
       _value: '{}'
     - _memberName: installMatchmaking
       _value: '{"value__":0}'
+--- !u!114 &1923821602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923821591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d878f3cefe73de843887845295dafb78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  rb: {fileID: 0}
+  delay: 5
+  minVelocity: 0.01
 --- !u!1 &1925248241
 GameObject:
   m_ObjectHideFlags: 0
@@ -48743,4 +48475,3 @@ SceneRoots:
   - {fileID: 1198403878}
   - {fileID: 468729830}
   - {fileID: 330907125}
-  - {fileID: 1052690195}
