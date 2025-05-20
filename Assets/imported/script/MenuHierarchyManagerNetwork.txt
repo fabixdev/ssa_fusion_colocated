@@ -1,0 +1,133 @@
+using Oculus.Interaction;
+using UnityEngine;
+using System.Collections.Generic;
+using Fusion;
+using System.Diagnostics;
+
+public class MenuManagerNetwork : NetworkBehaviour
+{
+    [Header("Configurazione del Menu")]
+    public Transform menuParent;
+    public GameObject colorPrefab;
+    public GameObject bottonepoke;
+
+    [System.Serializable]
+    public class ColorOption
+    {
+        public string colorID;
+        public Material material;
+    }
+
+    [System.Serializable]
+    public class SubGroup
+    {
+        public string nametag;
+        public List<ColorOption> colorOptions;
+    }
+
+    [System.Serializable]
+    public class Group
+    {
+        public string namerow;
+        public List<SubGroup> subGroups;
+    }
+
+    public List<Group> mainGroups;
+
+    [Networked] public int SelectedGroupIndex { get; set; }
+    [Networked] public int SelectedSubGroupIndex { get; set; }
+    [Networked] public int SelectedColorIndex { get; set; }
+
+    [ContextMenu("Create Menu")]
+    private void CreateMenu()
+    {
+        GenerateMenu();
+    }
+
+    public void GenerateMenu()
+    {
+        foreach (var group in mainGroups)
+        {
+            int groupIdx = mainGroups.IndexOf(group);
+            GameObject parentGroup = CreateGroup(group.namerow, menuParent);
+
+            CreateButton(bottonepoke, parentGroup.transform, groupIdx, -1, -1);
+
+            CreateSubGroups(group, parentGroup.transform, groupIdx);
+        }
+    }
+
+    private GameObject CreateGroup(string name, Transform parent)
+    {
+        GameObject groupObject = new GameObject(name);
+        groupObject.transform.SetParent(parent);
+        return groupObject;
+    }
+
+    private void CreateButton(GameObject buttonPrefab, Transform parent, int groupIdx, int subGroupIdx, int colorIdx)
+    {
+        if (buttonPrefab != null)
+        {
+            GameObject buttonObject = Instantiate(buttonPrefab, parent);
+            buttonObject.name = parent.name + "_Button";
+
+            var handler = buttonObject.GetComponent<PokeMenuNode>();
+            if (handler != null)
+            {
+                handler.groupIndex = groupIdx;
+                handler.subGroupIndex = subGroupIdx;
+                handler.colorIndex = colorIdx;
+            }
+        }
+    }
+
+    private void CreateSubGroups(Group parentGroup, Transform parentTransform, int groupIdx)
+    {
+        for (int i = 0; i < parentGroup.subGroups.Count; i++)
+        {
+            var subGroup = parentGroup.subGroups[i];
+
+            GameObject subGroupObject = CreateGroup(subGroup.nametag, parentTransform);
+            CreateButton(bottonepoke, subGroupObject.transform, groupIdx, i, -1);
+
+            CreateColorOptions(subGroup, subGroupObject.transform, groupIdx, i);
+        }
+    }
+
+    private void CreateColorOptions(SubGroup subGroup, Transform parentTransform, int groupIdx, int subGroupIdx)
+    {
+        for (int i = 0; i < subGroup.colorOptions.Count; i++)
+        {
+            var colorOption = subGroup.colorOptions[i];
+            GameObject colorObject = Instantiate(colorPrefab, parentTransform);
+            colorObject.name = colorOption.colorID;
+
+            var renderer = colorObject.GetComponent<Renderer>();
+            if (renderer != null)
+                renderer.material = colorOption.material;
+
+            var draggableScript = colorObject.GetComponent<Draggable2>();
+            if (draggableScript != null)
+                draggableScript.tagName = subGroup.nametag;
+
+            var handler = colorObject.GetComponent<PokeMenuNode>();
+            if (handler != null)
+            {
+                handler.groupIndex = groupIdx;
+                handler.subGroupIndex = subGroupIdx;
+                handler.colorIndex = i;
+            }
+        }
+    }
+
+    public void UpdateSelection(int groupIndex, int subGroupIndex, int colorIndex)
+    {
+        SelectedGroupIndex = groupIndex;
+        SelectedSubGroupIndex = subGroupIndex;
+        SelectedColorIndex = colorIndex;
+
+        UnityEngine.Debug.Log($"[MenuManagerNetwork] Selezionato Group:{groupIndex} SubGroup:{subGroupIndex} Color:{colorIndex}");
+
+        // Qui aggiorna visivamente UI (es. highlight selezione)
+    }
+}

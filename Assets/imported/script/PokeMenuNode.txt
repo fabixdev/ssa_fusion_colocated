@@ -1,0 +1,53 @@
+using Fusion;
+using UnityEngine;
+using Oculus.Interaction;
+using System.Diagnostics;
+
+public class PokeMenuNode : NetworkBehaviour
+{
+    public MenuManagerNetwork manager;
+
+    public int groupIndex = -1;
+    public int subGroupIndex = -1;
+    public int colorIndex = -1;
+
+    private void Awake()
+    {
+        var wrapper = GetComponent<InteractableUnityEventWrapper>();
+        if (wrapper != null)
+        {
+            wrapper.WhenSelect.AddListener(SelectSelf);
+        }
+        else
+        {
+            UnityEngine.Debug.LogError($"{name} manca InteractableUnityEventWrapper");
+        }
+
+        if (manager == null)
+        {
+            manager = FindObjectOfType<MenuManagerNetwork>();
+        }
+    }
+
+    private void SelectSelf()
+    {
+        // Chiamata RPC per aggiornare la selezione in rete
+        if (Runner == null)
+            return;
+
+        RpcRequestUpdateSelection(groupIndex, subGroupIndex, colorIndex);
+    }
+
+    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    void RpcRequestUpdateSelection(int group, int subGroup, int color)
+    {
+        manager.UpdateSelection(group, subGroup, color);
+        RpcNotifyClients(group, subGroup, color);
+    }
+
+    [Rpc(RpcSources.StateAuthority, RpcTargets.All)]
+    void RpcNotifyClients(int group, int subGroup, int color)
+    {
+        manager.UpdateSelection(group, subGroup, color);
+    }
+}

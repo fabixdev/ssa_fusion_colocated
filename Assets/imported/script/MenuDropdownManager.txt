@@ -1,0 +1,26 @@
+using UnityEngine;
+using Fusion;
+using System;
+
+public class MenuDropdownManager : NetworkBehaviour
+{
+    public MenuTogglePoke[] allToggles;
+
+    private void Awake()
+    {
+        allToggles = FindObjectsOfType<MenuTogglePoke>();
+    }
+
+    // Chiude tutti i toggle (esempio di funzione utile)
+    [ContextMenu("Close All Toggles")]
+    public void CloseAllToggles()
+    {
+        if (!Object.HasStateAuthority)
+            return;
+
+        foreach (var toggle in allToggles)
+        {
+            toggle.ForceClose();
+        }
+    }
+}

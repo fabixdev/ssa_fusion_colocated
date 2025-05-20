@@ -1,0 +1,23 @@
+using UnityEngine;
+using Oculus.Interaction;
+
+public class PokeMenuNodeRow2 : MonoBehaviour
+{
+    public MenuHierarchyManagerNetwork manager;  // Riferimento manuale nel Inspector
+
+    private void Awake()
+    {
+        var wrapper = GetComponent<InteractableUnityEventWrapper>();
+        if (wrapper)
+            wrapper.WhenSelect.AddListener(SelectSelf);
+        else
+            UnityEngine.Debug.LogError($"{name} manca InteractableUnityEventWrapper");
+    }
+
+    // Quando il bottone viene selezionato, invoca la funzione Select nel manager del menu
+    private void SelectSelf()
+    {
+        int subGroupIndex = transform.GetSiblingIndex();  // Ottieni l'indice del sotto-gruppo
+        manager.Select(2, subGroupIndex);  // Passiamo 2 per row2 e l'indice del sotto-gruppo selezionato
+    }
+}
