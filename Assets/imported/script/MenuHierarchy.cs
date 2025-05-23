@@ -58,7 +58,7 @@ public class MenuManager : MonoBehaviour
             if (groupToggle != null)
             {
                 groupToggle.contentContainer = groupContainer;
-                groupToggle.ForceClose();  // chiude all’inizio
+                groupToggle.ForceClose();  // chiude all’inizio     si ma da capire
             }
 
 
@@ -81,7 +81,7 @@ public class MenuManager : MonoBehaviour
                 if (subToggle != null)
                 {
                     subToggle.contentContainer = colorContainer;
-                    subToggle.ForceClose();
+                    subToggle.ForceClose(); //da capire 
                 }
 
 

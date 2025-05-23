@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 5838e892-31a4-4f65-a415-dc108aefa14c
-  instanceId: 03b34cfa-af1f-4467-a4f2-9ce2c87da543
+  instanceId: 913b0462-dee4-4a13-b08b-62bc04ecaeb5
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -676,13 +676,13 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1293012232460052555}
+        m_TargetAssemblyTypeName: MenuTogglePoke, Assembly-CSharp
+        m_MethodName: OnPokePressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
