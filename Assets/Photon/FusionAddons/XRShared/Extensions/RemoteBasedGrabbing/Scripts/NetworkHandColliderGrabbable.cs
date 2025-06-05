@@ -182,7 +182,7 @@ namespace Fusion.XR.Shared.Grabbing.NetworkHandColliderBased
             // We apply release velocity if needed
             if (networkRigidbody && networkRigidbody.Rigidbody.isKinematic == false && applyVelocityOnRelease)
             {
-                networkRigidbody.Rigidbody.velocity = Velocity;
+                networkRigidbody.Rigidbody.linearVelocity = Velocity;
                 networkRigidbody.Rigidbody.angularVelocity = AngularVelocity;
             }
 

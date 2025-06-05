@@ -27,7 +27,7 @@ public class ReturnToOriginalPosition : MonoBehaviour
     void Update()
     {
         // 1. Controlla se l'oggetto si sta muovendo
-        if (rb.velocity.magnitude > minVelocity)      // <-- correzione qui
+        if (rb.linearVelocity.magnitude > minVelocity)      // <-- correzione qui
         {
             // Se l'oggetto si muove, annulla un eventuale ritorno in corso
             if (isReturning)

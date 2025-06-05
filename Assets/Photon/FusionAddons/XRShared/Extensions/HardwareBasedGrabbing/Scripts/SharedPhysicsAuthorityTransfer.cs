@@ -53,7 +53,7 @@ namespace Fusion.XR.Shared.Grabbing {
             // If we have authority on the current object, we check if we already have authority on the collided object
             if (other && !other.Object.HasStateAuthority && !other.IsGrabbed)
             {
-                if (IsGrabbed || (rb.velocity.magnitude > collision.rigidbody.velocity.magnitude))
+                if (IsGrabbed || (rb.linearVelocity.magnitude > collision.rigidbody.linearVelocity.magnitude))
                 {
                     lastAuthorityTakeOver = Time.time;
                     other.lastAuthorityTakeOver = Time.time;

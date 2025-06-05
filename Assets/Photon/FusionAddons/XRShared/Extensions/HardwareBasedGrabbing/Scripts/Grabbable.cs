@@ -170,7 +170,7 @@ namespace Fusion.XR.Shared.Grabbing
             // We apply release velocity if needed
             if (rb && rb.isKinematic == false && applyVelocityOnRelease)
             {
-                rb.velocity = Velocity;
+                rb.linearVelocity = Velocity;
                 rb.angularVelocity = AngularVelocity;
             }
 
